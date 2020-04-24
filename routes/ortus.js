@@ -9,8 +9,14 @@ const path = require('path')
 const Formulir = require('../models/Formulir')
 var view = __dirname + "/views/"
 
-router.get('/', (req, res) => {
-    res.sendFile(path.join(view + "halamanDepan.html"))
+router.get('/dataayah', (req, res) => {
+    res.sendFile(path.join(view + "ayah.html"))
+})
+router.get('/dataibu', (req, res) => {
+    res.sendFile(path.join(view + "ibu.html"))
+})
+router.get('/datawali', (req, res) => {
+    res.sendFile(path.join(view + "wali.html"))
 })
 
 //api untuk simpan data ayah
@@ -36,9 +42,7 @@ router.post('/ayah', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).redirect('/ortu/dataibu')
     })
 })
 
@@ -65,9 +69,7 @@ router.post('/ibu', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).redirect('/ortu/datawali')
     })
 })
 
@@ -94,9 +96,7 @@ router.post('/wali', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).redirect('/nilai')
     })
 })
 

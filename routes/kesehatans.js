@@ -36,9 +36,7 @@ router.post('/riwayat', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).redirect('/ortu/dataayah')
     })
 })
 

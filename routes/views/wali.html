@@ -68,19 +68,20 @@
 
 <body>
     <div class="kotak_login">
-        <p class="tulisan_login">Keterangan Kesehatan</p>
+        <p class="tulisan_login">Data Orang Tua / Wali</p>
         <br />
         <br />
-        <form action="/kesehatan/riwayat" method="POST">
-            <p>Penyakit Yang Diderita: (sebutkan/kapan)</p>
-            <input type="text" name="tbc" class="form_login" placeholder="TBC" required>
-            <input type="text" name="malaria" class="form_login" placeholder="Malaria" required>
-            <input type="text" name="chotipa" class="form_login" placeholder="chotipa" required>
-            <input type="text" name="cacar" class="form_login" placeholder="Cacar" required>
-            <input type="text" name="lain_lain" class="form_login" placeholder="Lain-lain" required>
-            <input type="submit" class="tombol_login" value="Data Orang Tua / Wali">
+        <form action="/ortu/wali" method="POST">
+            <input type="text" name="nama" class="form_login" placeholder="Nama Wali">
+            <input type="text" name="tempat_lahir" class="form_login" placeholder="Tempat Lahir Wali">
+            <input type="text" name="pekerjaan" class="form_login" placeholder="Pekerjaan Wali">
+            <input type="text" name="pendidikan" class="form_login" placeholder="Pendidikan Wali">
+            <input type="text" name="kewarganegaraan" class="form_login" placeholder="Kewarganegaraan Wali">
+            <input type="text" name="agama" class="form_login" placeholder="Agama Wali">
+            <input type="text" name="nohp" class="form_login" placeholder="No Hp Wali">
+            <input type="submit" class="tombol_login" value="Nilai Rapor">
             <br />
-            <p>*Jika tidak pernah tulis tidak pernah</p>
+            <p>*Jika ada yang tidak diketahui, lewat saja</p>
             <br />
         </form>
     </div>
