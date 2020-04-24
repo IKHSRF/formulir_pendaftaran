@@ -1,13 +1,21 @@
+//module module yang diperlukan
 const express = require("express")
 const router = express.Router()
 const Nama = require('../models/Data')
 require('dotenv').config()
+const path = require('path')
 
 //model data formulir
 const Formulir = require('../models/Formulir')
+var view = __dirname + "/views/"
 
-//api untuk ayah
-router.put('/ayah', async (req, res) => {
+router.get('/', (req, res) => {
+    res.sendFile(path.join(view + "halamanDepan.html"))
+})
+
+//api untuk simpan data ayah
+//kenapa post, karena html tidak dukung put
+router.post('/ayah', async (req, res) => {
     const ayah = {
         nama: req.body.nama,
         tempat_lahir: req.body.tempat_lahir,
@@ -34,8 +42,9 @@ router.put('/ayah', async (req, res) => {
     })
 })
 
-//api untuk ibu
-router.put('/ibu', async (req, res) => {
+//api untuk simpan data ibu
+//kenapa post, karena html tidak dukung put
+router.post('/ibu', async (req, res) => {
     const ibu = {
         nama: req.body.nama,
         tempat_lahir: req.body.tempat_lahir,
@@ -62,8 +71,9 @@ router.put('/ibu', async (req, res) => {
     })
 })
 
-//api untuk wali 
-router.put('/wali', async (req, res) => {
+//api untuk simpan data wali
+//kenapa post, karena html tidak dukung put
+router.post('/wali', async (req, res) => {
     const wali = {
         nama: req.body.nama,
         tempat_lahir: req.body.tempat_lahir,
@@ -90,4 +100,5 @@ router.put('/wali', async (req, res) => {
     })
 })
 
+//export dulu gan, nanti error
 module.exports = router

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+//Schema untuk database formulir pendaftaran
 const formulirSchema = new mongoose.Schema({
     no_pendaftaran: {
         type: String
@@ -71,13 +72,30 @@ const formulirSchema = new mongoose.Schema({
         email: {
             type: String
         },
+        kode_pos: {
+            type: String
+        },
         tinggal_dengan: {
             type: String
         }
     },
     keterangan_kesehatan: {
         penyakit_diderita: {
-            type: String
+            lain_lain: {
+                type: String
+            },
+            tbc: {
+                type: String
+            },
+            malaria: {
+                type: String
+            },
+            chotipa: {
+                type: String
+            },
+            cacar: {
+                type: String
+            },
         },
         kelainan_jasmani: {
             type: String

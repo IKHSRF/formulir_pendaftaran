@@ -1,3 +1,4 @@
+//module module yang diperlukan
 const express = require("express")
 const router = express.Router()
 const Nama = require('../models/Data')
@@ -6,7 +7,8 @@ require('dotenv').config()
 //model data formulir
 const Formulir = require('../models/Formulir')
 
-router.put('/informasi', async (req, res) => {
+//api untuk informasi terkahir
+router.post('/informasi', async (req, res) => {
 
     const informasi = {
         informasi_smk: req.body.informasi_smk,
@@ -29,4 +31,5 @@ router.put('/informasi', async (req, res) => {
     })
 })
 
+//export lagi jangan lupa, error nanti
 module.exports = router

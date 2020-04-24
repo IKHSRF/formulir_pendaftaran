@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Calon Murid</title>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            background: #F5F8FA;
+        }
+
+        h1 {
+            text-align: center;
+            /*ketebalan font*/
+            font-weight: 300;
+        }
+
+        .tulisan_login {
+            text-align: center;
+            /*membuat semua huruf menjadi kapital*/
+            /*text-transform: uppercase;*/
+        }
+
+        .kotak_login {
+            width: 350px;
+            background: #FFFFFF;
+            /*meletakkan form ke tengah*/
+            margin: 80px auto;
+            padding: 30px 20px;
+        }
+
+        label {
+            font-size: 11pt;
+        }
+
+        .form_login {
+            /*membuat lebar form penuh*/
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            font-size: 11pt;
+            margin-bottom: 20px;
+        }
+
+        .tombol_login {
+            background: #1DA1F2;
+            color: white;
+            font-size: 11pt;
+            width: 100%;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+        }
+
+        .link {
+            background: #657786;
+            color: white;
+            font-size: 11pt;
+            width: 100%;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kotak_login">
+        <p class="tulisan_login">Data Calon Murid</p>
+        <br />
+        <br />
+        <form action="/murid/calonmurid" method="POST">
+            <select name="jalur_penerimaan" class="form_login" required>
+                <option selected="true" disabled="true">Jalur Penerimaan</option>
+                <option value="Reguler" name="jalur_penerimaan">Reguler</option>
+                <option value="Beasiswa" name="jalur_penerimaan">Beasiswa</option>
+            </select>
+            <input type="text" name="nama_lengkap" class="form_login" placeholder="Nama Lengkap" required>
+            <input type="text" name="nama_panggilan" class="form_login" placeholder="Nama Panggilan" required>
+            <select name="jenis_kelamin" class="form_login" required>
+                <option disabled=true selected=true>Jenis Kelamin</option>
+                <option value="laki-laki" name="jenis_kelamin">Laki - Laki</option>
+                <option value="perempuan" name="jenis_kelamin">Perempuan</option>
+            </select>
+            <input type="text" name="tempat_lahir" class="form_login" placeholder="Tempat,tanggal lahir" required>
+            <input type="text" name="agama" class="form_login" placeholder="Agama" required>
+            <input type="text" name="cita_cita" class="form_login" placeholder="Cita - cita" required>
+            <input type="text" name="hoby" class="form_login" placeholder="Hoby" required>
+            <input type="number" name="anak_ke" class="form_login" placeholder="Anak Ke" required>
+            <input type="number" name="jumlah_saudara" class="form_login" placeholder="Jumlah Saudara" required>
+            <input type="number" name="berat_badan" class="form_login" placeholder="Berat Badan" required>
+            <input type="number" name="tinggi_badan" class="form_login" placeholder="Tinggi Badan" required>
+            <input type="text" name="golongan_darah" class="form_login" placeholder="Golongan Darah" required>
+            <input type="submit" class="tombol_login" value="Keterangan Tempat Tinggal">
+            <br />
+            <p>*Jika ada yang tidak tahu tulis tidak tahu</p>
+            <br />
+        </form>
+    </div>
+</body>
+
+</html>

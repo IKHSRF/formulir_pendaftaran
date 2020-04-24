@@ -68,13 +68,25 @@
 
 <body>
     <div class="kotak_login">
-        <p class="tulisan_login">Data Pendaftaran</p>
+        <p class="tulisan_login">Keterangan Tempat Tinggal</p>
         <br />
         <br />
-        <form action="/murid/daftar" method="POST">
-            <input type="number" name="no_pendaftaran" class="form_login" placeholder="No. Pendaftaran" required>
-            <input type="number" name="no_tes" class="form_login" placeholder="No. Test" required>
-            <input type="submit" class="tombol_login" value="Data Calon Murid">
+        <form action="/alamat/tempat_tinggal" method="POST">
+            <input type="text" name="alamat" class="form_login" placeholder="Alamat Rumah" required>
+            <input type="text" name="kelurahan" class="form_login" placeholder="Kelurahan" required>
+            <input type="text" name="kecamatan" class="form_login" placeholder="Kecamatan" required>
+            <input type="text" name="kota_kabupaten" class="form_login" placeholder="Kota/Kabupaten" required>
+            <input type="text" name="propinsi" class="form_login" placeholder="Propinsi" required>
+            <input type="text" name="no_telepon_rumah" class="form_login" placeholder="No. Telepon Rumah" required>
+            <input type="text" name="email" class="form_login" placeholder="Email" required>
+            <input type="text" name="kode_pos" class="form_login" placeholder="Kode Pos" required>
+            <select name="tinggal_dengan" class="form_login" required>
+                <option selected=true disabled=true>Tinggal Dengan</option>
+                <option value="Orang Tua">Orang Tua</option>
+                <option value="Asrama">Asrama</option>
+                <option value="Saudara">Saudara</option>
+            </select>
+            <input type="submit" class="tombol_login" value="Keterangan Kesehatan">
             <br />
             <br />
         </form>

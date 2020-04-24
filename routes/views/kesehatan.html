@@ -68,14 +68,19 @@
 
 <body>
     <div class="kotak_login">
-        <p class="tulisan_login">Data Pendaftaran</p>
+        <p class="tulisan_login">Keterangan Kesehatan</p>
         <br />
         <br />
-        <form action="/murid/daftar" method="POST">
-            <input type="number" name="no_pendaftaran" class="form_login" placeholder="No. Pendaftaran" required>
-            <input type="number" name="no_tes" class="form_login" placeholder="No. Test" required>
+        <form action="/kesehatan/riwayat" method="POST">
+            <p>Penyakit Yang Diderita: (sebutkan/kapan)</p>
+            <input type="text" name="tbc" class="form_login" placeholder="TBC" required>
+            <input type="text" name="malaria" class="form_login" placeholder="Malaria" required>
+            <input type="text" name="chotipa" class="form_login" placeholder="chotipa" required>
+            <input type="text" name="cacar" class="form_login" placeholder="Cacar" required>
+            <input type="text" name="lain_lain" class="form_login" placeholder="Lain-lain" required>
             <input type="submit" class="tombol_login" value="Data Calon Murid">
             <br />
+            <p>*Jika tidak pernah tulis tidak pernah</p>
             <br />
         </form>
     </div>

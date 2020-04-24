@@ -1,3 +1,4 @@
+//module module yang di butuhkan
 const express = require("express")
 const router = express.Router()
 const Nama = require('../models/Data')
@@ -6,7 +7,9 @@ require('dotenv').config()
 //model data formulir
 const Formulir = require('../models/Formulir')
 
-router.put('/rapor', async (req, res) => {
+//api untuk simpan data nilai calon murid
+//kenapa post, karena html tidak mendukung put
+router.post('/rapor', async (req, res) => {
     const rapor = {
         pai: {
             semester1: req.body.semester1_pai,
@@ -70,4 +73,5 @@ router.put('/rapor', async (req, res) => {
     })
 })
 
+//export dulu gan, nanti error
 module.exports = router
