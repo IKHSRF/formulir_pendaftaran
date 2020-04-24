@@ -1,90 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran Siswa Baru</title>
-    <style type="text/css">
-        body {
-            font-family: sans-serif;
-            background: #F5F8FA;
-        }
-
-        h1 {
-            text-align: center;
-            /*ketebalan font*/
-            font-weight: 300;
-        }
-
-        .tulisan_login {
-            text-align: center;
-            /*membuat semua huruf menjadi kapital*/
-            /*text-transform: uppercase;*/
-        }
-
-        .kotak_login {
-            width: 350px;
-            background: #FFFFFF;
-            /*meletakkan form ke tengah*/
-            margin: 80px auto;
-            padding: 30px 20px;
-        }
-
-        label {
-            font-size: 11pt;
-        }
-
-        .form_login {
-            /*membuat lebar form penuh*/
-            box-sizing: border-box;
-            width: 100%;
-            padding: 10px;
-            font-size: 11pt;
-            margin-bottom: 20px;
-        }
-
-        .tombol_login {
-            background: #1DA1F2;
-            color: white;
-            font-size: 11pt;
-            width: 100%;
-            border: none;
-            border-radius: 3px;
-            padding: 10px 20px;
-        }
-
-        .link {
-            background: #657786;
-            color: white;
-            font-size: 11pt;
-            width: 100%;
-            border: none;
-            border-radius: 3px;
-            padding: 10px 20px;
-        }
-    </style>
-</head>
+<html>
+<title>Pendaftaran</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
-    <div class="kotak_login">
-        <p class="tulisan_login">Data Orang Tua / Wali</p>
-        <br />
-        <br />
-        <form action="/ortu/wali" method="POST">
-            <input type="text" name="nama" class="form_login" placeholder="Nama Wali">
-            <input type="text" name="tempat_lahir" class="form_login" placeholder="Tempat Lahir Wali">
-            <input type="text" name="pekerjaan" class="form_login" placeholder="Pekerjaan Wali">
-            <input type="text" name="pendidikan" class="form_login" placeholder="Pendidikan Wali">
-            <input type="text" name="kewarganegaraan" class="form_login" placeholder="Kewarganegaraan Wali">
-            <input type="text" name="agama" class="form_login" placeholder="Agama Wali">
-            <input type="text" name="nohp" class="form_login" placeholder="No Hp Wali">
-            <input type="submit" class="tombol_login" value="Nilai Rapor">
-            <br />
-            <p>*Jika ada yang tidak diketahui, lewat saja</p>
-            <br />
-        </form>
+
+    <div class="w3-sidebar w3-bar-block w3-blue w3-card" style="width:160px;">
+        <a href="/murid/pendaftaran" class="w3-bar-item w3-button">Data Calon Murid</a>
+        <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+            Data Orang Tua <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="demoAcc" class="w3-hide w3-white w3-card">
+            <a href="/ortu/dataayah" class="w3-bar-item w3-button">Ayah</a>
+            <a href="/ortu/dataibu" class="w3-bar-item w3-button">Ibu</a>
+            <a href="/ortu/datawali" class="w3-bar-item w3-button w3-blue">Wali</a>
+        </div>
+
+        <div class="w3-dropdown-click">
+            <button class="w3-button w3-block w3-left-align" onclick="myAccFuncd()">
+                Nilai Rapor <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="demoAccd" class="w3-hide w3-white w3-card">
+                <a href="/nilai/indo" class="w3-bar-item w3-button">Bahasa Indonesia</a>
+                <a href="/nilai/inggris" class="w3-bar-item w3-button">Bahasa Inggris</a>
+                <a href="/nilai/mtk" class="w3-bar-item w3-button">Matematika</a>
+                <a href="/nilai/ipa" class="w3-bar-item w3-button">IPA</a>
+                <a href="/nilai/agama" class="w3-bar-item w3-button">Agama</a>
+                <a href="/nilai/ips" class="w3-bar-item w3-button">IPS</a>
+                <a href="/nilai/prestasi" class="w3-bar-item w3-button">Prestasi Yang Diraih</a>
+            </div>
+        </div>
+        <a href="/alamat" class="w3-bar-item w3-button">Keterangan Tempat Tinggal</a>
+        <a href="/kesehatan" class="w3-bar-item w3-button">Keterangan Kesehatan</a>
     </div>
+
+    <div class="w3-container" style="margin-left:160px">
+        <div class="w3-card-4">
+
+            <div class="w3-container w3-blue">
+                <h2>Keterangan Orang Tua / Wali</h2>
+            </div>
+            <form class="w3-container" action="/ortu/wali" method="POST">
+                <br />
+                <label>Nama Wali (Masih ada/Almarhum)</label>
+                <input class="w3-input" type="text" name="nama">
+
+                <label>Tempat Lahir Wali</label>
+                <input class="w3-input" type="text" name="tempat_lahir">
+
+                <label>Pekerjaan Wali</label>
+                <input type="text" name="pekerjaan" class="w3-input">
+
+                <label>Pendidikan Wali</label>
+                <input type="text" name="pendidikan" class="w3-input">
+
+                <label>Kewarganegaraan Wali</label>
+                <input type="text" name="kewarganegaraan" class="w3-input">
+
+                <label>Agama Wali</label>
+                <input type="text" name="agama" class="w3-input">
+
+                <label>No. Hp Wali</label>
+                <input type="text" name="nohp" class="w3-input">
+
+                <p />
+                <p>*Jika ada yang tidak diketahui, lewat saja</p>
+                <p />
+                <button class="w3-btn w3-blue" type="submit">Input Data</button>
+                <p />
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        function myAccFunc() {
+            var x = document.getElementById("demoAcc");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-blue";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-green", "");
+            }
+        }
+
+        function myAccFuncd() {
+            var x = document.getElementById("demoAccd");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3blue";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-green", "");
+            }
+        }
+    </script>
+
 </body>
 
 </html>

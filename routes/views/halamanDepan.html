@@ -1,84 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran Siswa Baru</title>
-    <style type="text/css">
-        body {
-            font-family: sans-serif;
-            background: #F5F8FA;
-        }
-
-        h1 {
-            text-align: center;
-            /*ketebalan font*/
-            font-weight: 300;
-        }
-
-        .tulisan_login {
-            text-align: center;
-            /*membuat semua huruf menjadi kapital*/
-            /*text-transform: uppercase;*/
-        }
-
-        .kotak_login {
-            width: 350px;
-            background: #FFFFFF;
-            /*meletakkan form ke tengah*/
-            margin: 80px auto;
-            padding: 30px 20px;
-        }
-
-        label {
-            font-size: 11pt;
-        }
-
-        .form_login {
-            /*membuat lebar form penuh*/
-            box-sizing: border-box;
-            width: 100%;
-            padding: 10px;
-            font-size: 11pt;
-            margin-bottom: 20px;
-        }
-
-        .tombol_login {
-            background: #1DA1F2;
-            color: white;
-            font-size: 11pt;
-            width: 100%;
-            border: none;
-            border-radius: 3px;
-            padding: 10px 20px;
-        }
-
-        .link {
-            background: #657786;
-            color: white;
-            font-size: 11pt;
-            width: 100%;
-            border: none;
-            border-radius: 3px;
-            padding: 10px 20px;
-        }
-    </style>
-</head>
+<html>
+<title>Pendaftaran</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
-    <div class="kotak_login">
-        <p class="tulisan_login">Data Pendaftaran</p>
-        <br />
-        <br />
-        <form action="/murid/daftar" method="POST">
-            <input type="number" name="no_pendaftaran" class="form_login" placeholder="No. Pendaftaran" required>
-            <input type="number" name="no_tes" class="form_login" placeholder="No. Test" required>
-            <input type="submit" class="tombol_login" value="Data Calon Murid">
-            <br />
-            <br />
-        </form>
+
+    <div class="w3-container">
+
+        <div class="w3-card-4">
+            <div class="w3-container w3-blue">
+                <h2>Pendaftaran Calon Peserta Didik Baru</h2>
+            </div>
+
+            <form class="w3-container" action="/murid/daftar" method="POST">
+                <p>
+                    <input type="number" name="no_pendaftaran" class="w3-input" required>
+                    <label>No. Pendaftaran</label></p>
+                <p>
+                    <input type="number" name="no_tes" class="w3-input" required>
+                    <label>No. Test</label></p>
+                <button class="w3-btn w3-blue" type="submit">Pengisian Formulir</button>
+                <p />
+            </form>
+        </div>
     </div>
+
 </body>
 
 </html>

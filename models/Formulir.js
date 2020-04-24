@@ -39,7 +39,15 @@ const formulirSchema = new mongoose.Schema({
         type: String
     },
     jumlah_saudara: {
-        type: String
+        kandung: {
+            type: String
+        },
+        tiri: {
+            type: String
+        },
+        angkat: {
+            type: String
+        }
     },
     berat_badan: {
         type: String
@@ -170,112 +178,110 @@ const formulirSchema = new mongoose.Schema({
             type: String
         }
     },
-    nilai_rapor: {
-        pai: {
-            semester1: {
-                type: String
-            },
-            semester2: {
-                type: String
-            },
-            semester3: {
-                type: String
-            },
-            semester4: {
-                type: String
-            },
-            semester5: {
-                type: String
-            }
+    pai: {
+        semester1: {
+            type: String
         },
-        bahasa_indonesia: {
-            semester1: {
-                type: String
-            },
-            semester2: {
-                type: String
-            },
-            semester3: {
-                type: String
-            },
-            semester4: {
-                type: String
-            },
-            semester5: {
-                type: String
-            }
+        semester2: {
+            type: String
         },
-        bahasa_inggris: {
-            semester1: {
-                type: String
-            },
-            semester2: {
-                type: String
-            },
-            semester3: {
-                type: String
-            },
-            semester4: {
-                type: String
-            },
-            semester5: {
-                type: String
-            }
+        semester3: {
+            type: String
         },
-        matematika: {
-            semester1: {
-                type: String
-            },
-            semester2: {
-                type: String
-            },
-            semester3: {
-                type: String
-            },
-            semester4: {
-                type: String
-            },
-            semester5: {
-                type: String
-            }
+        semester4: {
+            type: String
         },
-        ipa: {
-            semester1: {
-                type: String
-            },
-            semester2: {
-                type: String
-            },
-            semester3: {
-                type: String
-            },
-            semester4: {
-                type: String
-            },
-            semester5: {
-                type: String
-            }
-        },
-        ips: {
-            semester1: {
-                type: String
-            },
-            semester2: {
-                type: String
-            },
-            semester3: {
-                type: String
-            },
-            semester4: {
-                type: String
-            },
-            semester5: {
-                type: String
-            }
-        },
-        prestasi_diraih: {
+        semester5: {
             type: String
         }
+    },
+    bahasa_indonesia: {
+        semester1: {
+            type: String
+        },
+        semester2: {
+            type: String
+        },
+        semester3: {
+            type: String
+        },
+        semester4: {
+            type: String
+        },
+        semester5: {
+            type: String
+        }
+    },
+    bahasa_inggris: {
+        semester1: {
+            type: String
+        },
+        semester2: {
+            type: String
+        },
+        semester3: {
+            type: String
+        },
+        semester4: {
+            type: String
+        },
+        semester5: {
+            type: String
+        }
+    },
+    matematika: {
+        semester1: {
+            type: String
+        },
+        semester2: {
+            type: String
+        },
+        semester3: {
+            type: String
+        },
+        semester4: {
+            type: String
+        },
+        semester5: {
+            type: String
+        }
+    },
+    ipa: {
+        semester1: {
+            type: String
+        },
+        semester2: {
+            type: String
+        },
+        semester3: {
+            type: String
+        },
+        semester4: {
+            type: String
+        },
+        semester5: {
+            type: String
+        }
+    },
+    ips: {
+        semester1: {
+            type: String
+        },
+        semester2: {
+            type: String
+        },
+        semester3: {
+            type: String
+        },
+        semester4: {
+            type: String
+        },
+        semester5: {
+            type: String
+        }
+    },
+    prestasi_diraih: {
+        type: String
     },
     mengetahui: {
         informasi_smk: {

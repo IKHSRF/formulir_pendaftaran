@@ -55,7 +55,11 @@ router.post('/ubahcalonmurid', async (req, res) => {
             cita_cita: a.cita_cita,
             hoby: a.hoby,
             anak_ke: a.anak_ke,
-            jumlah_saudara: a.jumlah_saudara,
+            jumlah_saudara: {
+                kandung: a.kandung,
+                tiri: a.tiri,
+                angkat: a.angkat
+            },
             berat_badan: a.berat_badan,
             tinggi_badan: a.tinggi_badan,
             golongan_darah: a.golongan_darah,
@@ -88,7 +92,11 @@ router.post('/calonmurid', async (req, res) => {
             cita_cita: a.cita_cita,
             hoby: a.hoby,
             anak_ke: a.anak_ke,
-            jumlah_saudara: a.jumlah_saudara,
+            jumlah_saudara: {
+                kandung: a.kandung,
+                tiri: a.tiri,
+                angkat: a.angkat
+            },
             berat_badan: a.berat_badan,
             tinggi_badan: a.tinggi_badan,
             golongan_darah: a.golongan_darah,
