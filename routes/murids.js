@@ -1,8 +1,9 @@
 //module module yang diperlukan
 const express = require("express")
 const router = express.Router()
-const Nama = require('../models/Data')
 const path = require('path')
+const multer = require('multer')
+const fs = require('fs')
 require('dotenv').config()
 
 //model data formulir
@@ -80,8 +81,8 @@ router.post('/ubahcalonmurid', async (req, res) => {
 
 //api untuk data calon murid
 //kenapa post karena tidak bisa put
-router.post('/calonmurid', async (req, res) => {
 
+router.post('/calonmurid', async (req, res) => {
     const a = req.body
 
     Formulir.updateOne({
