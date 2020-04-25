@@ -3,15 +3,22 @@ const express = require("express")
 const router = express.Router()
 const Nama = require('../models/Data')
 require('dotenv').config()
+const path = require('path')
 
 //model data formulir
 const Formulir = require('../models/Formulir')
+
+var view = __dirname + "/views/"
+
+router.get('/', (req, res) => {
+    res.sendFile(path.join(view + "informasi.html"))
+})
 
 //api untuk informasi terkahir
 router.post('/informasi', async (req, res) => {
 
     const informasi = {
-        informasi_smk: req.body.informasi_smk,
+        informasi_smk: req.body.keluarga + " " + req.body.website + " " + req.body.teman + " " + req.body.brosur + " " + req.body.smp + " " + req.body.facebook + " " + req.body.karyawan + " " + req.body.lainnya,
         ttd_orangtua: req.body.ttd_orangtua
     }
 
@@ -25,9 +32,7 @@ router.post('/informasi', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).sendFile(path.join(view + "akhir.html"))
     })
 })
 

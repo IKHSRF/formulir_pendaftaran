@@ -30,6 +30,7 @@ const alamatRoute = require('./routes/alamats')
 const ortuRoute = require('./routes/ortus')
 const riwayatRoute = require('./routes/kesehatans')
 const nilaiRoute = require('./routes/nilais')
+const informasiRoute = require('./routes/informasi')
 
 //using route
 app.use('/murid', muridRoute)
@@ -37,6 +38,7 @@ app.use('/alamat', alamatRoute)
 app.use('/ortu', ortuRoute)
 app.use('/kesehatan', riwayatRoute)
 app.use('/nilai', nilaiRoute)
+app.use('/informasi', informasiRoute)
 
 //buka port
 app.listen(3000, () => {

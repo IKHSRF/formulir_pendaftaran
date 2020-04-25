@@ -21,6 +21,10 @@ router.get('/pendaftaran', (req, res) => {
     res.sendFile(path.join(view + "pendaftaran.html"))
 })
 
+router.get('/ubahdata', (req, res) => {
+    res.sendFile(path.join(view + "berhasil.html"))
+})
+
 //api untuk pendaftaran
 router.post('/daftar', async (req, res) => {
 

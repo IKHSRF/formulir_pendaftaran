@@ -9,7 +9,7 @@ const path = require('path')
 const Formulir = require('../models/Formulir')
 var view = __dirname + "/views/"
 
-router.get('/pai', (req, res) => {
+router.get('/agama', (req, res) => {
     res.sendFile(path.join(view + "pai.html"))
 })
 router.get('/indo', (req, res) => {
@@ -51,9 +51,7 @@ router.post('/pai', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).redirect('/nilai/ipa')
     })
 })
 
@@ -76,9 +74,7 @@ router.post('/ipa', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).redirect('/nilai/ips')
     })
 })
 
@@ -101,9 +97,7 @@ router.post('/mtk', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).redirect('/nilai/agama')
     })
 })
 
@@ -126,9 +120,7 @@ router.post('/inggris', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).redirect('/nilai/prestasi')
     })
 })
 
@@ -145,9 +137,7 @@ router.post('/prestasi', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).redirect('/informasi')
     })
 })
 
@@ -170,9 +160,7 @@ router.post('/ips', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).json({
-            message: "Update Berhasil"
-        })
+        res.status(201).redirect('/nilai/inggris')
     })
 })
 
@@ -196,9 +184,7 @@ router.post('/indo', async (req, res) => {
             if (err) {
                 throw err
             }
-            res.status(201).json({
-                message: "Update Berhasil"
-            })
+            res.status(201).redirect('/nilai/mtk')
         })
 })
 

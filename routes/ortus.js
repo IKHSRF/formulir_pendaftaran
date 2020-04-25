@@ -96,7 +96,7 @@ router.post('/wali', async (req, res) => {
         if (err) {
             throw err
         }
-        res.status(201).redirect('/nilai')
+        res.status(201).redirect('/nilai/indo')
     })
 })
 

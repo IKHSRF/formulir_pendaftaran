@@ -8,7 +8,7 @@
 <body>
 
     <div class="w3-sidebar w3-bar-block w3-blue w3-card" style="width:160px;">
-        <a href="/murid/pendaftaran" class="w3-bar-item w3-button w3-light-gray">Data Calon Murid</a>
+        <a href="/murid/pendaftaran" class="w3-bar-item w3-button">Data Calon Murid</a>
         <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
             Data Orang Tua <i class="fa fa-caret-down"></i>
         </button>
@@ -25,7 +25,7 @@
             <div id="demoAccd" class="w3-hide w3-white w3-card">
                 <a href="/nilai/indo" class="w3-bar-item w3-button">Bahasa Indonesia</a>
                 <a href="/nilai/inggris" class="w3-bar-item w3-button">Bahasa Inggris</a>
-                <a href="/nilai/mtk" class="w3-bar-item w3-button">Matematika</a>
+                <a href="/nilai/mtk" class="w3-bar-item w3-button w3-blue">Matematika</a>
                 <a href="/nilai/ipa" class="w3-bar-item w3-button">IPA</a>
                 <a href="/nilai/agama" class="w3-bar-item w3-button">Agama</a>
                 <a href="/nilai/ips" class="w3-bar-item w3-button">IPS</a>
@@ -42,59 +42,33 @@
         <div class="w3-card-4">
 
             <div class="w3-container w3-blue">
-                <h2>Data Calon Murid</h2>
+                <h2>Nilai Rapor Matematika</h2>
             </div>
-
-            <form class="w3-container" action="/murid/calonmurid" method="POST">
+            <form class="w3-container" action="/nilai/mtk" method="POST">
                 <br />
-                <label>Jalur Penerimaan</label>
-                <select class="w3-select" name="jalur_penerimaan">
-                    <option disabled selected>Pilih</option>
-                    <option value="Reguler">Reguler</option>
-                    <option value="Beasiswa">Beasiswa</option>
-                </select>
+                <p>Kelas 7</p>
+                <br />
+                <label>Nilai Semester 1</label>
+                <input class="w3-input" type="text" name="semester1_matematika">
 
-                <label>Nama Lengkap</label>
-                <input class="w3-input" type="text" name="nama_lengkap" required>
+                <label>Nilai Semester 2</label>
+                <input class="w3-input" type="text" name="semester2_matematika">
 
-                <label>Nama Panggilan</label>
-                <input class="w3-input" type="text" name="nama_panggilan" required>
+                <br />
+                <p>Kelas 8</p>
+                <br />
+                <label>Nilai Semester 1</label>
+                <input type="text" name="semester3_matematika" class="w3-input">
 
-                <label>Jenis Kelamin</label>
-                <select class="w3-select" name="jenis_kelamin">
-                    <option disabled selected>Pilih</option>
-                    <option value="laki-laki">Laki - Laki</option>
-                    <option value="perempuan">Perempuan</option>
-                </select>
+                <label>Nilai Semester 2</label>
+                <input type="text" name="semester4_matematika" class="w3-input">
 
-                <label>Tempat,tanggal lahir</label>
-                <input type="text" name="tempat_lahir" class="w3-input" required>
-                <label>Agama</label>
-                <input type="text" name="agama" class="w3-input" required>
-                <label>Cita - Cita</label>
-                <input type="text" name="cita_cita" class="w3-input" required>
-                <label>Hoby</label>
-                <input type="text" name="hoby" class="w3-input" required>
-                <label>Anak ke</label>
-                <input type="number" name="anak_ke" class="w3-input" required>
-                <label>Jumlah Saudara</label>
-                <div class="w3-row-padding">
-                    <div class="w3-third">
-                        <input class="w3-input w3-border" type="text" placeholder="Kandung" name="kandung">
-                    </div>
-                    <div class="w3-third">
-                        <input class="w3-input w3-border" type="text" placeholder="Tiri" name="tiri">
-                    </div>
-                    <div class="w3-third">
-                        <input class="w3-input w3-border" type="text" placeholder="Angkat" name="angkat">
-                    </div>
-                </div>
-                <label>Berat Badan</label>
-                <input type="number" name="berat_badan" class="w3-input" required>
-                <label>Tinggi Badan</label>
-                <input type="number" name="tinggi_badan" class="w3-input" required>
-                <label>Golongan Darah</label>
-                <input type="text" name="golongan_darah" class="w3-input" required>
+                <br />
+                <p>Kelas 9</p>
+                <br />
+                <label>Nilai Semester 1</label>
+                <input type="text" name="semester5_matematika" class="w3-input">
+
                 <br />
                 <button class="w3-btn w3-blue" type="submit">Input Data</button>
                 <p />
